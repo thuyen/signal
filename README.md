@@ -1,6 +1,6 @@
 ## Basic FFT ops for pytorch (currently only works on GPU).
 
-### For tensor
+### For tensors
 ````
 from torchsignal import fft
 
@@ -11,11 +11,9 @@ y = fft.fft1(x)
 # nxhxwx2 array represents n complex images
 x = torch.rand(5, 128, 128, 2).cuda()
 y = fft.fft2(x)
-
-
 ````
 
-### For Variable
+### For Variables
 ````
 from torch.autograd import Variable
 from torchsignal import functional as F

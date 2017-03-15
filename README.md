@@ -4,7 +4,7 @@
 ````
 from torchsignal import fft
 
-# [... n, 2] array represents complex numbers
+# [..., n, 2] array represents complex numbers
 x = torch.rand(5, 2).cuda()
 y = fft.fft1(x)
 

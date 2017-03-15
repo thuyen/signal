@@ -33,7 +33,7 @@ class iFFT1(Function):
             lib_fft.fft1_c2c(input, output, -1)
         else:
             lib_fft.fft1_c2c_cuda(input, output, -1)
-        output.mul_(size[-2])
+        output.div_(size[-2])
         return output.view(size)
 
     def backward(self, grad_output):

@@ -1,4 +1,4 @@
-from torchsignal import lib_fft
+from . import lib_fft
 
 def fft1(input):
     # [..., n, 2]

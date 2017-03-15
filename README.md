@@ -7,7 +7,7 @@ from torchsignal import functional as F
 
 # nx2 represent n complex numbers
 x = Variable(torch.rand(5, 2).cuda())
-y = F.FFT1()(x)
+y = F.fft1()(x)
 ````
 
 ### For tensor

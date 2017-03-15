@@ -46,3 +46,11 @@ class FFT2(Function):
         else:
             lib_fft.fft2_c2c_cuda(grad_output, grad_input, -1)
         return grad_input.view(size)
+
+def fft1(input):
+    f = FFT1()
+    return f(input)
+
+def fft2(input):
+    f = FFT2()
+    return f(input)

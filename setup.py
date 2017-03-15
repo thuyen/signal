@@ -3,7 +3,7 @@ import sys
 
 from setuptools import setup, find_packages
 
-#import signal.build
+#import torchsignal.build
 
 this_file = os.path.dirname(__file__)
 

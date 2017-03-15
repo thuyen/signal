@@ -40,7 +40,7 @@ def ifft2(input):
     input = input.view(-1, *size[-3:])
     output = input.new()
     if not input.is_cuda:
-        lib_fft.fft2_c2c_cuda(input, output, -1)
+        lib_fft.fft2_c2c(input, output, -1)
     else:
         lib_fft.fft2_c2c_cuda(input, output, -1)
     output.div_(size[-2]*size[-3])
@@ -63,7 +63,7 @@ def ifft3(input):
     input = input.view(-1, *size[-4:])
     output = input.new()
     if not input.is_cuda:
-        lib_fft.fft3_c2c_cuda(input, output, -1)
+        lib_fft.fft3_c2c(input, output, -1)
     else:
         lib_fft.fft3_c2c_cuda(input, output, -1)
     output.div_(size[-2]*size[-3]*size[-4])

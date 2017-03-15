@@ -1,4 +1,4 @@
-## Basic FFT ops for pytorch.
+## Basic Signal Processing (FFTs) for PyTorch
 
 ### For Tensors
 ````

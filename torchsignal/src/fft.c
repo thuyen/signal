@@ -9,7 +9,7 @@ int fft1_c2c(THFloatTensor *input, THFloatTensor *output, int dir)
 {
   long nInputLines = input->size[0];
   long N = input->size[1];
-  int size[2] = {N};
+  int size[1] = {N};
 
   THFloatTensor_resizeAs(output, input);
 

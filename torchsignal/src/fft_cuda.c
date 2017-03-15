@@ -55,3 +55,29 @@ int fft2_c2c_cuda(THCudaTensor *input, THCudaTensor *output, int dir)
   return 0;
 }
 
+
+int fft3_c2c_cuda(THCudaTensor *input, THCudaTensor *output, int dir)
+{
+  long nInputPlanes = input->size[0];
+  long N = input->size[1];
+  long M = input->size[2];
+  long K = input->size[3];
+  int size[3] = {N, M, K};
+
+  THCudaTensor_resizeAs(state, output, input);
+
+  THArgCheck(THCudaTensor_isContiguous(NULL, input), 2, "Input tensor must be contiguous");
+  THArgCheck(THCudaTensor_isContiguous(NULL, output), 2, "Output tensor must be contiguous");
+
+  // raw pointers 
+  cuComplex *input_data = (cuComplex*)THCudaTensor_data(NULL, input);
+  cuComplex *output_data = (cuComplex*)THCudaTensor_data(NULL, output);
+
+  // execute FFT
+  // dir: CUFFT_FORWARD, CUFFT_INVERSE
+  cufftHandle plan;
+  cufftPlanMany(&plan, 3, size, NULL, 1, 0, NULL, 1, 0, CUFFT_C2C, nInputPlanes);
+  cufftExecC2C(plan, (cufftComplex*)input_data, (cufftComplex*)output_data, -dir);
+  return 0;
+}
+

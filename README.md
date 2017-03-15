@@ -1,4 +1,4 @@
-## Basic FFT ops for pytorch (currently only works on GPU).
+## Basic FFT ops for pytorch (currently only support GPU).
 
 ### For tensors
 ````

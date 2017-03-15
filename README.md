@@ -1,5 +1,6 @@
 ## Basic Signal Processing (FFTs) for PyTorch
 
+### Supported OPs: `fft1`, `fft2`, `fft3`, `ifft1`, `ifft2`, `ifft3`.
 ### For Tensors
 ````
 from torchsignal import fft

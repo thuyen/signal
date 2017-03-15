@@ -14,7 +14,6 @@ class FFT1(Function):
         return output.view(size)
 
     def backward(self, grad_output):
-        return ifft2(grad_output)
         size = grad_output.size()
         grad_output = grad_output.view(-1, *size[-2:])
         grad_input = grad_output.new()
@@ -37,7 +36,6 @@ class FFT2(Function):
         return output.view(size)
 
     def backward(self, grad_output):
-        return ifft2(grad_output)
         size = grad_output.size()
         grad_output = grad_output.view(-1, *size[-3:])
         grad_input = grad_output.new()

@@ -1,4 +1,4 @@
-## Basic FFT ops for pytorch (GPU only, for now)
+## Basic FFT ops for pytorch. This currently only works on GPU
 
 ### For tensor
 ````

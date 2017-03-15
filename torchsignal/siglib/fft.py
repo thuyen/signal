@@ -39,5 +39,5 @@ def ifft2(input):
     input = input.view(-1, *size[-3:])
     output = input.new()
     lib_fft.fft2_c2c_cuda(input, output, -1)
-    output.div_(size[-3])
+    output.div_(size[-2]*size[-3])
     return output.view(size)

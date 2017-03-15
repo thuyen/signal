@@ -1,6 +1,6 @@
 ## Basic FFT ops for pytorch (currently only support GPU).
 
-### For tensors
+### For Tensors
 ````
 from torchsignal import fft
 

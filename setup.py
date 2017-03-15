@@ -3,17 +3,16 @@ import sys
 
 from setuptools import setup, find_packages
 
-#import torchsignal.build
+#import signal.build
 
 this_file = os.path.dirname(__file__)
 
 setup(
     name="torchsignal",
     version="0.1",
-    description="FFT for pytorch",
-    url="https://github.com/thuyen/torchsignal/",
-    author="XYZ",
-    author_email="vanthuyen@gmail.com",
+    description="Signal Processing for Pytorch",
+    url="https://github.com/thuyen/signal/",
+    author="Thuyen Ngo",
     # Require cffi.
     install_requires=["cffi>=1.0.0"],
     setup_requires=["cffi>=1.0.0"],

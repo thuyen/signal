@@ -1,5 +1,4 @@
 #include <THC/THC.h>
-#include <TH/TH.h>
 #include <cufft.h>
 
 // this symbol will be resolved automatically from PyTorch libs

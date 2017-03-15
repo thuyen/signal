@@ -1,7 +1,7 @@
 from . import lib_fft
 
 def fft1(input):
-    # [... a, 2]
+    # [... n, 2]
     if not input.is_cuda:
         raise ValueError('Only GPU tensors are supported')
     size = input.size()
@@ -11,7 +11,7 @@ def fft1(input):
     return output.view(size)
 
 def ifft1(input):
-    # size [... a, 2]
+    # size [... n, 2]
     if not input.is_cuda:
         raise ValueError('Only GPU tensors are supported')
     size = input.size()
@@ -22,7 +22,7 @@ def ifft1(input):
     return output.view(size)
 
 def fft2(input):
-    # size [... a, b, 2]
+    # size [... h, w, 2]
     if not input.is_cuda:
         raise ValueError('Only GPU tensors are supported')
     size = input.size()
@@ -32,7 +32,7 @@ def fft2(input):
     return output.view(size)
 
 def ifft2(input):
-    # size [... a, b, 2]
+    # size [... h, w, 2]
     if not input.is_cuda:
         raise ValueError('Only GPU tensors are supported')
     size = input.size()

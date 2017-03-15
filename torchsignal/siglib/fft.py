@@ -43,7 +43,7 @@ def ifft2(input):
         lib_fft.fft2_c2c_cuda(input, output, -1)
     else:
         lib_fft.fft2_c2c_cuda(input, output, -1)
-    output.div_(size[-3])
+    output.div_(size[-2]*size[-3])
     return output.view(size)
 
 def fft3(input):
@@ -66,5 +66,5 @@ def ifft3(input):
         lib_fft.fft3_c2c_cuda(input, output, -1)
     else:
         lib_fft.fft3_c2c_cuda(input, output, -1)
-    output.div_(size[-3])
+    output.div_(size[-2]*size[-3]*size[-4])
     return output.view(size)

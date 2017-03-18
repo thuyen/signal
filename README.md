@@ -5,7 +5,7 @@
 
 ### Examples
 ````
-import toch
+import torch
 from torch.autograd import Variable
 from torchsignal import fft1, fft2
 

@@ -5,8 +5,9 @@
 
 ### Examples
 ````
-from torchsignal import fft1, fft2
+import toch
 from torch.autograd import Variable
+from torchsignal import fft1, fft2
 
 # [..., n, 2] array represents complex numbers
 x = torch.rand(5, 2).cuda()

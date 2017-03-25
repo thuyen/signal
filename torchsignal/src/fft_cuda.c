@@ -52,6 +52,9 @@ int fft2_c2c_cuda(THCudaTensor *input, THCudaTensor *output, int dir)
   cufftHandle plan;
   cufftPlanMany(&plan, 2, size, NULL, 1, 0, NULL, 1, 0, CUFFT_C2C, nInputPlanes);
   cufftExecC2C(plan, (cufftComplex*)input_data, (cufftComplex*)output_data, -dir);
+
+  // clean up
+  cufftDestroy(plan);
   return 0;
 }
 
@@ -78,6 +81,9 @@ int fft3_c2c_cuda(THCudaTensor *input, THCudaTensor *output, int dir)
   cufftHandle plan;
   cufftPlanMany(&plan, 3, size, NULL, 1, 0, NULL, 1, 0, CUFFT_C2C, nInputPlanes);
   cufftExecC2C(plan, (cufftComplex*)input_data, (cufftComplex*)output_data, -dir);
+
+  // clean up
+  cufftDestroy(plan);
   return 0;
 }
 

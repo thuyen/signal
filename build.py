@@ -4,22 +4,22 @@ from torch.utils.ffi import create_extension
 
 this_file = os.path.dirname(__file__)
 
-sources = ['src/fft.c']
-headers = ['src/fft.h']
+sources = ['torchsignal/src/fft.c']
+headers = ['torchsignal/src/fft.h']
 defines = []
 with_cuda = False
 libraries = ['fftw3f']
 
 if torch.cuda.is_available():
     print('Including CUDA code.')
-    sources += ['src/fft_cuda.c']
-    headers += ['src/fft_cuda.h']
+    sources += ['torchsignal/src/fft_cuda.c']
+    headers += ['torchsignal/src/fft_cuda.h']
     defines += [('WITH_CUDA', None)]
     libraries += ['cufft']
     with_cuda = True
 
 ffi = create_extension(
-    'siglib.lib_fft',
+    'torchsignal.siglib.lib_fft',
     headers=headers,
     package=True,
     sources=sources,

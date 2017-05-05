@@ -1,11 +1,9 @@
 ## Basic Signal Processing (FFTs) for PyTorch
 
 ### Installations
-#### libfft3
 `sudo apt-get install libfftw3-3`
-#### torchsignal
 `python setup.py install`
-#### or
+OR
 `pip install git+https://github.com/thuyen/signal`
 
 ### Supported Operations

@@ -3,6 +3,8 @@
 ### Installations
 `sudo apt-get install libfftw3-3`
 
+`pip install cffi`
+
 `python setup.py install`
 
 OR

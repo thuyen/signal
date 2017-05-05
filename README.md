@@ -2,8 +2,11 @@
 
 ### Installations
 `sudo apt-get install libfftw3-3`
+
 `python setup.py install`
+
 OR
+
 `pip install git+https://github.com/thuyen/signal`
 
 ### Supported Operations

@@ -5,6 +5,10 @@
 
 `pip install cffi`
 
+Then 
+
+`git clone https://github.com/thuyen/signal`
+
 `python setup.py install`
 
 OR

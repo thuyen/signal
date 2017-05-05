@@ -2,11 +2,11 @@
 
 ### Installations
 #### libfft3
-sudo apt-get install libfftw3-3
+`sudo apt-get install libfftw3-3`
 #### torchsignal
-python setup.py install
+`python setup.py install`
 #### or
-pip install git+https://github.com/thuyen/signal
+`pip install git+https://github.com/thuyen/signal`
 
 ### Supported Operations
 `fft1`, `fft2`, `fft3`, `ifft1`, `ifft2`, `ifft3`.

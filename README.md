@@ -9,7 +9,7 @@ Then
 
 `git clone https://github.com/thuyen/signal`
 
-`python setup.py install`
+`cd signal; python setup.py install`
 
 OR
 

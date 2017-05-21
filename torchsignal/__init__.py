@@ -1,5 +1,5 @@
 import torch
-from siglib import fft, functional
+from .siglib import fft, functional
 
 def fft1(input):
     if isinstance(input, torch.autograd.Variable):

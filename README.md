@@ -1,6 +1,6 @@
 ## Basic Signal Processing (FFTs) for PyTorch
 
-### Installations
+### Installation
 `sudo apt-get install libfftw3-3`
 
 `pip install cffi`
